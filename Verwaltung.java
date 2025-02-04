@@ -1,22 +1,37 @@
+import java.util.Scanner;
+
+
+
 public class Verwaltung {
-    public static void main(String[] args){
+    private Scanner scanner;
+
+    public static void main(String[] args) {
+
+        new Verwaltung();
+        System.out.println("Herzlich willkommen zu Zeichenketten verschluesselerer!");
 
     }
-        public Verwaltung(){
+    public Verwaltung(){
         scanner = new Scanner(System.in);
-        Warteschlange warteschlange = new Warteschlange();
+        warteschlange warteschlange= new warteschlange();
         while (true) {
-            System.out.println("==Hauptmenü==");
-            System.out.println("[1]Hinzufügen");
-            System.out.println("[2]Erstes Auslesen");
+            System.out.println("== HAUPTMENÜ ==");
+            System.out.println("[1]Hinzufuegen");
+            System.out.println("[2]Ersten Auslesen");
             int option = scanner.nextInt();
-            if (option==1) {
-                System.out.println("Wie viele willst du");
+            if(option==1) {
+                System.out.println("Wie viele sollen hinzufügt werden ?");
                 option = scanner.nextInt();
-                for (int i=0;i<option;i++){
-                    warteschlange.einfuegen(new Kunde(pName""));
-                }else if
+
+                Kunde hilf = new Kunde("Mustapha");
+                warteschlange.einfuegen(hilf);
+            }else if (option==2){
+                System.out.println("------Kundenname---------- ");
+                Kunde hilfe = (Kunde)warteschlange.getErsten();
+                System.out.println(hilfe.getName());
+                warteschlange.entfernen();
             }
+
         }
-        }
+    }
 }
