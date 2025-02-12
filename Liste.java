@@ -22,7 +22,7 @@ public void remove () {
 public void next (){
 
 }
-public void append (T pKontent){ KnotenListe ContentType=Erster;
+public void append (T pKontent) { KnotenListe ContentType=Erster;
 
     if (Erster == null){
         Erster = new KnotenListe<>(pKontent);
